@@ -1,0 +1,8 @@
+how preprocessing.scale works
+
+if you have a matrix (mtx) which is a np array with mtx.shape = (a,b)
+then:
+    a = number of samples
+    b = number of features
+
+preprocessing.scale(mtx, axis = 0) will scalarize the mtx feature wise. So it will scalarize b times.

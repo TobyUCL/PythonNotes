@@ -1,0 +1,4 @@
+INFO - svm - Running command 'run'
+INFO - svm - Started run with ID "13"
+INFO - svm - Result: 0.6228070175438597
+INFO - svm - Completed after 0:00:00

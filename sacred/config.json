@@ -1,0 +1,8 @@
+{
+  "__dict__": {
+    "message": "The configuration is read-only in a captured function!"
+  },
+  "message": "Hello world!",
+  "recipient": "world",
+  "seed": 369770796
+}

@@ -1,0 +1,10 @@
+experiment_name,iris
+random_method,uniform_mersenne
+reduction_method,
+reduction_interval,50
+reduction_window,20
+reduction_threshold,0.2
+reduction_metric,val_acc
+complete_time,11/15/19/12:22
+x_shape,"(150, 4)"
+y_shape,"(150, 3)"
