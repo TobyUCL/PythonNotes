@@ -1,0 +1,23 @@
+The best way to store a series of python functions that you wish to use all over your computer is as a module.
+
+Just like numpy, keras and tensorflow I may create and use my own functions as modules.
+To do this I need to put all of the python scripts I wish to be importable into one folder, with a __init__.py file.
+
+Then in the top folder I need to create a setup.py file, which looks like this:
+
+from setuptools import setup
+
+setup(
+    name='modulesName',
+    version='0.0.1',
+    description='my module',
+    author='Tobias Allcock',
+    author_email='rmaptgo@ucl.ac.uk'
+)
+
+Then I have to install the file.
+At the moment it is much more useful to install it in development mode, this means that any changes made to the file modules files will change the functionality without needing to reinstall it.
+$ pip install -e ./ 
+
+For more information
+https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
