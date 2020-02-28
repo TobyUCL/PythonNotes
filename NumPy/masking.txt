@@ -1,0 +1,23 @@
+Notes on masking
+
+If you have a mask which is of mask.shape= (x, y, z) binary values,
+and a data file data.shape=(x,y,z,a,b).
+
+Then 
+masked_data = data[mask==1]
+where masked_data.shape = (n,a,b) where n is the number of 1's in the binary mask.
+
+To plump up the masked_data back to it's original size, make an array which is of equal size to data.
+
+plumped_up = np.zeros(data.shape)
+
+then to fill the values back in we may do this:
+plumped_up[mask==1] = masked_data
+
+another way of doing this is getting an index from the mask.
+mask_index = np.where(mask==1)
+
+this is a tuple with length = ndim the number of dimensions of the mask. 
+Each value in the tuple is a numpy array of length n.
+
+plumped_up[mask_index]=masked_data
