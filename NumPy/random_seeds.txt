@@ -1,0 +1,11 @@
+Every time you import numpy it creates a new random state.
+	"state" is a seed but it is different to the numpy.random.seed(), this is because a seed is just an integer but the "random_state" is much larger.
+
+To get the state:
+	random_state = np.random.get_state()
+To save the state:
+	np.save("random_state_name", random_state)
+To load the state:
+	loaded_random_state = tuple(np.load("random_state_name.npy",pickle=True))
+To set the state:
+	np.random.set_state(loaded_random_state)
