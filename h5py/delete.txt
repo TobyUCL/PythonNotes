@@ -1,0 +1,4 @@
+To delete datasetname from "filename.h5" then do the following
+
+with h5py.File("filename.h5",  "a") as hf:
+    del hf[datasetname]
