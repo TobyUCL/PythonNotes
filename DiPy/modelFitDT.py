@@ -1,5 +1,6 @@
 """
 Preform a model fit on DWI data to get the DT
+from https://dipy.org/documentation/1.1.1./examples_built/restore_dti/
 """
 
 import numpy as np
@@ -50,6 +51,8 @@ The diffusion tensor is now stored in the fit_wls class, along with the:
     evecs
     evals
     and others
+
+The lower traingular DT is of the form [Dxx,Dxy,Dyy,Dxz,Dyz,Dzz]
 """
 
 diffusion_tensor_values = fit_wls.lower_triangular()
@@ -136,3 +139,6 @@ evecs1_b0Normed = fit_wls_b0Normed.evecs
 Now to compare the b0 norm, and not normed, FA values
 """
 fa_norm_notNorm_diff = fa1_b0Normed-fa1_1b0 # as you can see it is the same up to tiny (~-12) computational error 
+
+
+range(2)
